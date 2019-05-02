@@ -85,11 +85,12 @@ public class TransactionActivity extends AppCompatActivity{
 
                 if (insertTrans){
                     Toast.makeText(TransactionActivity.this, "New transaction inserted!", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(TransactionActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    //Intent intent = new Intent(TransactionActivity.this, MainActivity.class);
+                    //startActivity(intent);
+                    finish();
                 } else {
                     // Toast.makeText( TransactionActivity.this,"uid = " + uid , Toast.LENGTH_SHORT ).show();
-                    //Toast.makeText(TransactionActivity.this, "Failed to insert transaction data", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TransactionActivity.this, "Failed to insert transaction data", Toast.LENGTH_LONG).show();
                 }
             }
             else

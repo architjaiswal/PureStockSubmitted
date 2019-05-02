@@ -1,4 +1,33 @@
 package com.example.purestock;
+import android.app.DatePickerDialog;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.RelativeSizeSpan;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.example.purestock.Model.User;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 
 import android.app.DatePickerDialog;
 import android.database.Cursor;
@@ -176,6 +205,9 @@ public class GainLoss extends AppCompatActivity{
             double oldPrice, newPrice;
             int index = 0;
 
+            if(!resultEndpointList.isEmpty())
+                resultEndpointList.clear();
+
             try {
                 for(String value : searchResults) {
 
@@ -319,7 +351,7 @@ public class GainLoss extends AppCompatActivity{
                                         avgPrice = ((Double.parseDouble(values[2]) + Double.parseDouble(transactionCursor.getString(transactionCursor.getColumnIndex("PRICE")))) / 2);
                                         values[2] = Double.toString(avgPrice);
                                     } else {
-                                        shares = -Integer.parseInt(values[3]) + Integer.parseInt(transactionCursor.getString(transactionCursor.getColumnIndex("NUMBER_STOCK")));
+                                        shares = Integer.parseInt(values[3]) + Integer.parseInt(transactionCursor.getString(transactionCursor.getColumnIndex("NUMBER_STOCK")));
                                         if (shares > 0) {
                                             values[2] = transactionCursor.getString(transactionCursor.getColumnIndex("PRICE"));
                                             values[4] = "0";

@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(flag){
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
-                        //Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_LONG).show();
 
                         // String sql="select uid from user where username=" + str_username;
                         //String args[] = {"uid" + "=?"};
@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-                            Toast.makeText(LoginActivity.this, "useid" + uids, Toast.LENGTH_LONG).show();
+                            //Toast.makeText(LoginActivity.this, "useid" + uids, Toast.LENGTH_LONG).show();
                             // startActivity(inte);
                             //Toast.makeText(LoginActivity.this, "uid" + us.getUid(), Toast.LENGTH_LONG).show();
                         }

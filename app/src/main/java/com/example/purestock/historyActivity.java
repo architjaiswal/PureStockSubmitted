@@ -58,6 +58,7 @@ public class historyActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.top_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("History");
 
         User us = new User();
         int uid = us.getUid();
