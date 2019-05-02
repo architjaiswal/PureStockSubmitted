@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:padding="10dp"
     tools:context=".Add_note_activity">
 
     <android.support.v7.widget.Toolbar
@@ -63,4 +62,5 @@
             android:background="@drawable/button_background"
             android:layout_marginTop="15dp"/>
     </LinearLayout >
+
 </LinearLayout>
