@@ -25,7 +25,6 @@ import com.example.purestock.Model.User;
 //import com.google.firebase.database.FirebaseDatabase;
 //import com.google.firebase.database.ValueEventListener;
 public class LoginActivity extends AppCompatActivity {
-
     EditText username, password;
     Button login;
     TextView txt_signup;
@@ -47,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         txt_signup = findViewById(R.id.txt_signup);
         //final User us = (User) getApplication();
 
-       // auth = FirebaseAuth.getInstance();
+        // auth = FirebaseAuth.getInstance();
         database = new  com.example.purestock.DatabaseHelper(this);
         txt_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,18 +108,18 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         //Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_LONG).show();
 
-                       // String sql="select uid from user where username=" + str_username;
+                        // String sql="select uid from user where username=" + str_username;
                         //String args[] = {"uid" + "=?"};
 
-                       // rawQuery("SELECT id, name FROM people WHERE name = ? AND id = ?", new String[] {"David", "2"}
+                        // rawQuery("SELECT id, name FROM people WHERE name = ? AND id = ?", new String[] {"David", "2"}
                         Cursor cursor=sdb.rawQuery("select uid from user where username= ?", new String[]{str_username});
 
                         while (cursor.moveToNext()) {
                             uids = cursor.getInt( cursor.getColumnIndex( "UID" ) );
                             //String useid = Integer.toString( uids );
                             User us = new User(uids);
-                               us.setUsername( str_username );
-                               us.setUid( uids );
+                            us.setUsername( str_username );
+                            us.setUid( uids );
                             //Intent inte = new Intent(LoginActivity.this,TransactionActivity.class);
 
                             //inte.putExtra("UID", uids);
@@ -128,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                             Toast.makeText(LoginActivity.this, "useid" + uids, Toast.LENGTH_LONG).show();
-                           // startActivity(inte);
+                            // startActivity(inte);
                             //Toast.makeText(LoginActivity.this, "uid" + us.getUid(), Toast.LENGTH_LONG).show();
                         }
 //                        if(cursor !=  null && cursor.moveToFirst()){

@@ -9,22 +9,13 @@
     tools:context=".Fragement.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-   
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/transaction"
         android:hint="Transaction"
         android:layout_marginTop="15dp"
-        android:padding="10dp"
-        />
-    <!--<Button-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/add_stock"-->
-        <!--android:hint="Add_Stock"-->
-        <!--android:layout_marginTop="15dp"-->
-        <!--android:padding="10dp" />-->
+        android:padding="10dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -34,5 +25,12 @@
         android:layout_marginTop="15dp"
         android:padding="10dp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GainLoss"
+        android:hint="Gain Loss"
+        android:layout_marginTop="15dp"
+        android:padding="10dp" />
 
 </LinearLayout>

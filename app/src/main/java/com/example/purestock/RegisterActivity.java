@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Boolean insertUser = database.insertUser(str_username, str_password, str_fullname , str_email);
                     if (insertUser){
                         Toast.makeText(RegisterActivity.this, "Success to insert user data", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                         pd.dismiss();
                     } else {
