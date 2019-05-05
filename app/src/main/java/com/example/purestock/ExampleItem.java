@@ -1,4 +1,5 @@
 package com.example.purestock;
+
 public class ExampleItem {
     private String ticker; // ticker symbol for the stock
     private String comName; // company name of the stock
